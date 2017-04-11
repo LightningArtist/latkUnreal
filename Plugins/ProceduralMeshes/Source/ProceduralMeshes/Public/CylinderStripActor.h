@@ -33,6 +33,9 @@ public:
 
 	virtual void BeginPlay() override;
 
+	UFUNCTION(BlueprintCallable)
+	void RefreshCylinder();
+
 #if WITH_EDITOR
 	virtual void OnConstruction(const FTransform& Transform) override;
 #endif   // WITH_EDITOR

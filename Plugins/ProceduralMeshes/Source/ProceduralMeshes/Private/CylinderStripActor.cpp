@@ -34,6 +34,18 @@ void ACylinderStripActor::BeginPlay()
 	GenerateMesh();
 }
 
+void ACylinderStripActor::RefreshCylinder()
+{
+	PreCacheCrossSection();
+
+	// We need to re-construct the buffers since values can be changed in editor
+	Vertices.Empty();
+	Triangles.Empty();
+	SetupMeshBuffers();
+
+	GenerateMesh();
+}
+
 void ACylinderStripActor::SetupMeshBuffers()
 {
 	int32 TotalNumberOfVerticesPerSection = RadialSegmentCount * 4; // 4 verts per face 
