@@ -1,7 +1,7 @@
 {
-	"Changelist" : 3514769,
-	"CompatibleChangelist" : 3452394,
-	"BuildId" : "9d235d2e-0699-4a67-a724-267cd6977962",
+	"Changelist" : 3658906,
+	"CompatibleChangelist" : 3573198,
+	"BuildId" : "7d5229ac-d3e2-4191-ac6f-9a43d8706aee",
 	"Modules" : 
 	{
 		"JSONQuery" : "UE4Editor-JSONQuery.dll"
