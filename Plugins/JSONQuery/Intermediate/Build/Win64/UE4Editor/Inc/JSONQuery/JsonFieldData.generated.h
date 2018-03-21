@@ -16,7 +16,7 @@ class UObject;
 #endif
 #define JSONQUERY_JsonFieldData_generated_h
 
-#define latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_17_DELEGATE \
+#define JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_17_DELEGATE \
 struct _Script_JSONQuery_eventOnGetResult_Parms \
 { \
 	bool bSuccess; \
@@ -33,7 +33,19 @@ static inline void FOnGetResult_DelegateWrapper(const FMulticastScriptDelegate& 
 }
 
 
-#define latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS \
+#define JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execSaveStringTextToFile) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_SaveDirectory); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_FileName); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_SaveText); \
+		P_GET_UBOOL(Z_Param_AllowOverWriting); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=UJsonFieldData::SaveStringTextToFile(Z_Param_SaveDirectory,Z_Param_FileName,Z_Param_SaveText,Z_Param_AllowOverWriting); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execGetRequest) \
 	{ \
@@ -349,7 +361,19 @@ static inline void FOnGetResult_DelegateWrapper(const FMulticastScriptDelegate& 
 	}
 
 
-#define latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+#define JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSaveStringTextToFile) \
+	{ \
+		P_GET_PROPERTY(UStrProperty,Z_Param_SaveDirectory); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_FileName); \
+		P_GET_PROPERTY(UStrProperty,Z_Param_SaveText); \
+		P_GET_UBOOL(Z_Param_AllowOverWriting); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		*(bool*)Z_Param__Result=UJsonFieldData::SaveStringTextToFile(Z_Param_SaveDirectory,Z_Param_FileName,Z_Param_SaveText,Z_Param_AllowOverWriting); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execGetRequest) \
 	{ \
@@ -665,7 +689,7 @@ static inline void FOnGetResult_DelegateWrapper(const FMulticastScriptDelegate& 
 	}
 
 
-#define latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS_NO_PURE_DECLS \
+#define JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUJsonFieldData(); \
 	friend JSONQUERY_API class UClass* Z_Construct_UClass_UJsonFieldData(); \
@@ -675,7 +699,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS \
+#define JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS \
 private: \
 	static void StaticRegisterNativesUJsonFieldData(); \
 	friend JSONQUERY_API class UClass* Z_Construct_UClass_UJsonFieldData(); \
@@ -685,7 +709,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_STANDARD_CONSTRUCTORS \
+#define JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UJsonFieldData(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UJsonFieldData) \
@@ -698,7 +722,7 @@ private: \
 public:
 
 
-#define latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_ENHANCED_CONSTRUCTORS \
+#define JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UJsonFieldData(UJsonFieldData&&); \
@@ -709,32 +733,32 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UJsonFieldData); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UJsonFieldData)
 
 
-#define latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_PRIVATE_PROPERTY_OFFSET
-#define latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_19_PROLOG
-#define latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_GENERATED_BODY_LEGACY \
+#define JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_PRIVATE_PROPERTY_OFFSET
+#define JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_19_PROLOG
+#define JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_PRIVATE_PROPERTY_OFFSET \
-	latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS \
-	latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS \
-	latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_STANDARD_CONSTRUCTORS \
+	JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_PRIVATE_PROPERTY_OFFSET \
+	JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS \
+	JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS \
+	JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_GENERATED_BODY \
+#define JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_PRIVATE_PROPERTY_OFFSET \
-	latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
-	latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS_NO_PURE_DECLS \
-	latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_ENHANCED_CONSTRUCTORS \
+	JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_PRIVATE_PROPERTY_OFFSET \
+	JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+	JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_INCLASS_NO_PURE_DECLS \
+	JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID latkUnreal_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h
+#define CURRENT_FILE_ID JSONQuery_UE4_Plugins_JSONQuery_Source_JSONQuery_Classes_JsonFieldData_h
 
 
 #define FOREACH_ENUM_EJSONRESULT(op) \

@@ -40,6 +40,7 @@ void EmptyLinkFunctionForGeneratedCodeJsonFieldData() {}
 	JSONQUERY_API UFunction* Z_Construct_UFunction_UJsonFieldData_HasField();
 	JSONQUERY_API UFunction* Z_Construct_UFunction_UJsonFieldData_PostRequest();
 	JSONQUERY_API UFunction* Z_Construct_UFunction_UJsonFieldData_PostRequestWithFile();
+	JSONQUERY_API UFunction* Z_Construct_UFunction_UJsonFieldData_SaveStringTextToFile();
 	JSONQUERY_API UFunction* Z_Construct_UFunction_UJsonFieldData_SetBoolArray();
 	JSONQUERY_API UFunction* Z_Construct_UFunction_UJsonFieldData_SetBoolean();
 	JSONQUERY_API UFunction* Z_Construct_UFunction_UJsonFieldData_SetFloat();
@@ -144,6 +145,7 @@ static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EJSONResult(EJSONResult_
 			{ "HasField", (Native)&UJsonFieldData::execHasField },
 			{ "PostRequest", (Native)&UJsonFieldData::execPostRequest },
 			{ "PostRequestWithFile", (Native)&UJsonFieldData::execPostRequestWithFile },
+			{ "SaveStringTextToFile", (Native)&UJsonFieldData::execSaveStringTextToFile },
 			{ "SetBoolArray", (Native)&UJsonFieldData::execSetBoolArray },
 			{ "SetBoolean", (Native)&UJsonFieldData::execSetBoolean },
 			{ "SetFloat", (Native)&UJsonFieldData::execSetFloat },
@@ -731,6 +733,41 @@ static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EJSONResult(EJSONResult_
 		}
 		return ReturnFunction;
 	}
+	UFunction* Z_Construct_UFunction_UJsonFieldData_SaveStringTextToFile()
+	{
+		struct JsonFieldData_eventSaveStringTextToFile_Parms
+		{
+			FString SaveDirectory;
+			FString FileName;
+			FString SaveText;
+			bool AllowOverWriting;
+			bool ReturnValue;
+		};
+		UObject* Outer = Z_Construct_UClass_UJsonFieldData();
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			ReturnFunction = new(EC_InternalUseOnlyConstructor, Outer, TEXT("SaveStringTextToFile"), RF_Public|RF_Transient|RF_MarkAsNative) UFunction(FObjectInitializer(), nullptr, (EFunctionFlags)0x04022401, 65535, sizeof(JsonFieldData_eventSaveStringTextToFile_Parms));
+			CPP_BOOL_PROPERTY_BITMASK_STRUCT(ReturnValue, JsonFieldData_eventSaveStringTextToFile_Parms);
+			UProperty* NewProp_ReturnValue = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("ReturnValue"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(ReturnValue, JsonFieldData_eventSaveStringTextToFile_Parms), 0x0010000000000580, CPP_BOOL_PROPERTY_BITMASK(ReturnValue, JsonFieldData_eventSaveStringTextToFile_Parms), sizeof(bool), true);
+			CPP_BOOL_PROPERTY_BITMASK_STRUCT(AllowOverWriting, JsonFieldData_eventSaveStringTextToFile_Parms);
+			UProperty* NewProp_AllowOverWriting = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("AllowOverWriting"), RF_Public|RF_Transient|RF_MarkAsNative) UBoolProperty(FObjectInitializer(), EC_CppProperty, CPP_BOOL_PROPERTY_OFFSET(AllowOverWriting, JsonFieldData_eventSaveStringTextToFile_Parms), 0x0010000000000080, CPP_BOOL_PROPERTY_BITMASK(AllowOverWriting, JsonFieldData_eventSaveStringTextToFile_Parms), sizeof(bool), true);
+			UProperty* NewProp_SaveText = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("SaveText"), RF_Public|RF_Transient|RF_MarkAsNative) UStrProperty(CPP_PROPERTY_BASE(SaveText, JsonFieldData_eventSaveStringTextToFile_Parms), 0x0010000000000080);
+			UProperty* NewProp_FileName = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("FileName"), RF_Public|RF_Transient|RF_MarkAsNative) UStrProperty(CPP_PROPERTY_BASE(FileName, JsonFieldData_eventSaveStringTextToFile_Parms), 0x0010000000000080);
+			UProperty* NewProp_SaveDirectory = new(EC_InternalUseOnlyConstructor, ReturnFunction, TEXT("SaveDirectory"), RF_Public|RF_Transient|RF_MarkAsNative) UStrProperty(CPP_PROPERTY_BASE(SaveDirectory, JsonFieldData_eventSaveStringTextToFile_Parms), 0x0010000000000080);
+			ReturnFunction->Bind();
+			ReturnFunction->StaticLink();
+#if WITH_METADATA
+			UMetaData* MetaData = ReturnFunction->GetOutermost()->GetMetaData();
+			MetaData->SetValue(ReturnFunction, TEXT("Category"), TEXT("JSON"));
+			MetaData->SetValue(ReturnFunction, TEXT("CPP_Default_AllowOverWriting"), TEXT("false"));
+			MetaData->SetValue(ReturnFunction, TEXT("DisplayName"), TEXT("Save String to File"));
+			MetaData->SetValue(ReturnFunction, TEXT("ModuleRelativePath"), TEXT("Classes/JsonFieldData.h"));
+			MetaData->SetValue(ReturnFunction, TEXT("ToolTip"), TEXT("Saves text input to a file."));
+#endif
+		}
+		return ReturnFunction;
+	}
 	UFunction* Z_Construct_UFunction_UJsonFieldData_SetBoolArray()
 	{
 		struct JsonFieldData_eventSetBoolArray_Parms
@@ -1156,6 +1193,7 @@ static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EJSONResult(EJSONResult_
 				OuterClass->LinkChild(Z_Construct_UFunction_UJsonFieldData_HasField());
 				OuterClass->LinkChild(Z_Construct_UFunction_UJsonFieldData_PostRequest());
 				OuterClass->LinkChild(Z_Construct_UFunction_UJsonFieldData_PostRequestWithFile());
+				OuterClass->LinkChild(Z_Construct_UFunction_UJsonFieldData_SaveStringTextToFile());
 				OuterClass->LinkChild(Z_Construct_UFunction_UJsonFieldData_SetBoolArray());
 				OuterClass->LinkChild(Z_Construct_UFunction_UJsonFieldData_SetBoolean());
 				OuterClass->LinkChild(Z_Construct_UFunction_UJsonFieldData_SetFloat());
@@ -1190,6 +1228,7 @@ static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EJSONResult(EJSONResult_
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UJsonFieldData_HasField(), "HasField"); // 366205117
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UJsonFieldData_PostRequest(), "PostRequest"); // 1975280761
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UJsonFieldData_PostRequestWithFile(), "PostRequestWithFile"); // 976860613
+				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UJsonFieldData_SaveStringTextToFile(), "SaveStringTextToFile"); // 406226993
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UJsonFieldData_SetBoolArray(), "SetBoolArray"); // 1270163562
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UJsonFieldData_SetBoolean(), "SetBoolean"); // 1555802199
 				OuterClass->AddFunctionToFunctionMapWithOverriddenName(Z_Construct_UFunction_UJsonFieldData_SetFloat(), "SetFloat"); // 202852203
@@ -1222,7 +1261,7 @@ static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EJSONResult(EJSONResult_
 		check(OuterClass->GetClass());
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UJsonFieldData, 1615619512);
+	IMPLEMENT_CLASS(UJsonFieldData, 1866310629);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_UJsonFieldData(Z_Construct_UClass_UJsonFieldData, &UJsonFieldData::StaticClass, TEXT("/Script/JSONQuery"), TEXT("UJsonFieldData"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(UJsonFieldData);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

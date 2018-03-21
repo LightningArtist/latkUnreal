@@ -24,10 +24,10 @@
 /wd4838
 /w44668
 /I "D:\Epic Games\UE_4.17\Engine\Source"
-/I C:\Users\nick\Documents\GitHub\LightningArtist\latkUnreal\Plugins\JSONQuery\Source
-/I C:\Users\nick\Documents\GitHub\LightningArtist\latkUnreal\Plugins\JSONQuery\Source\JSONQuery\Classes
-/I C:\Users\nick\Documents\GitHub\LightningArtist\latkUnreal\Plugins\JSONQuery\Intermediate\Build\Win64\UE4Editor\Inc\JSONQuery
-/I C:\Users\nick\Documents\GitHub\LightningArtist\latkUnreal\Plugins\JSONQuery\Source\JSONQuery
+/I C:\Users\nick\Documents\GitHub\JSONQuery_UE4\Plugins\JSONQuery\Source
+/I C:\Users\nick\Documents\GitHub\JSONQuery_UE4\Plugins\JSONQuery\Source\JSONQuery\Classes
+/I C:\Users\nick\Documents\GitHub\JSONQuery_UE4\Plugins\JSONQuery\Intermediate\Build\Win64\UE4Editor\Inc\JSONQuery
+/I C:\Users\nick\Documents\GitHub\JSONQuery_UE4\Plugins\JSONQuery\Source\JSONQuery
 /I "D:\Epic Games\UE_4.17\Engine\Source\Runtime\Core\Public"
 /I "D:\Epic Games\UE_4.17\Engine\Source\Runtime\Core\Public\Internationalization"
 /I "D:\Epic Games\UE_4.17\Engine\Source\Runtime\Core\Public\Async"
@@ -357,9 +357,9 @@
 /FI"D:\Epic Games\UE_4.17\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Yu"D:\Epic Games\UE_4.17\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h"
 /Fp"D:\Epic Games\UE_4.17\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\SharedPCH.Engine.h.pch"
-"C:\Users\nick\Documents\GitHub\LightningArtist\latkUnreal\Plugins\JSONQuery\Intermediate\Build\Win64\UE4Editor\Development\JSONQuery\Module.JSONQuery.cpp"
-/FI"C:\Users\nick\Documents\GitHub\LightningArtist\latkUnreal\Plugins\JSONQuery\Intermediate\Build\Win64\UE4Editor\Development\JSONQuery\Definitions.JSONQuery.h"
-/Fo"C:\Users\nick\Documents\GitHub\LightningArtist\latkUnreal\Plugins\JSONQuery\Intermediate\Build\Win64\UE4Editor\Development\JSONQuery\Module.JSONQuery.cpp.obj"
+"C:\Users\nick\Documents\GitHub\JSONQuery_UE4\Plugins\JSONQuery\Intermediate\Build\Win64\UE4Editor\Development\JSONQuery\Module.JSONQuery.cpp"
+/FI"C:\Users\nick\Documents\GitHub\JSONQuery_UE4\Plugins\JSONQuery\Intermediate\Build\Win64\UE4Editor\Development\JSONQuery\Definitions.JSONQuery.h"
+/Fo"C:\Users\nick\Documents\GitHub\JSONQuery_UE4\Plugins\JSONQuery\Intermediate\Build\Win64\UE4Editor\Development\JSONQuery\Module.JSONQuery.cpp.obj"
 /TP
 /GR-
 /W4

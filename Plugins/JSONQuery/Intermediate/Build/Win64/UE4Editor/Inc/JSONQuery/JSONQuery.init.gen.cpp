@@ -22,8 +22,8 @@ void EmptyLinkFunctionForGeneratedCodeJSONQuery_init() {}
 			ReturnPackage = CastChecked<UPackage>(StaticFindObjectFast(UPackage::StaticClass(), nullptr, FName(TEXT("/Script/JSONQuery")), false, false));
 			ReturnPackage->SetPackageFlags(PKG_CompiledIn | 0x00000000);
 			FGuid Guid;
-			Guid.A = 0x73B71396;
-			Guid.B = 0xDC092300;
+			Guid.A = 0x1129B173;
+			Guid.B = 0x6EBE9DB8;
 			Guid.C = 0x00000000;
 			Guid.D = 0x00000000;
 			ReturnPackage->SetGuid(Guid);
