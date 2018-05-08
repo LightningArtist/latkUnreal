@@ -5,15 +5,18 @@ using System.Collections.Generic;
 
 public class latkUnrealTarget : TargetRules
 {
-	public latkUnrealTarget(TargetInfo Target)
+	public latkUnrealTarget(TargetInfo Target) : base (Target)
 	{
 		Type = TargetType.Game;
+
+		ExtraModuleNames.Add("latkUnreal");
 	}
 
 	//
 	// TargetRules interface.
 	//
 
+	/*
 	public override void SetupBinaries(
 		TargetInfo Target,
 		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
@@ -22,4 +25,5 @@ public class latkUnrealTarget : TargetRules
 	{
 		OutExtraModuleNames.AddRange( new string[] { "latkUnreal" } );
 	}
+	*/
 }

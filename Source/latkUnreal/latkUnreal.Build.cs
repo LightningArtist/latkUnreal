@@ -4,7 +4,7 @@ using UnrealBuildTool;
 
 public class latkUnreal : ModuleRules
 {
-	public latkUnreal(TargetInfo Target)
+	public latkUnreal(ReadOnlyTargetRules Target) : base (Target)
 	{
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 

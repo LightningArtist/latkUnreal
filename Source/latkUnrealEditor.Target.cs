@@ -8,12 +8,15 @@ public class latkUnrealEditorTarget : TargetRules
 	public latkUnrealEditorTarget(TargetInfo Target)
 	{
 		Type = TargetType.Editor;
+
+		ExtraModuleNames.Add("latkUnreal");
 	}
 
 	//
 	// TargetRules interface.
 	//
 
+	/*
 	public override void SetupBinaries(
 		TargetInfo Target,
 		ref List<UEBuildBinaryConfiguration> OutBuildBinaryConfigurations,
@@ -22,4 +25,5 @@ public class latkUnrealEditorTarget : TargetRules
 	{
 		OutExtraModuleNames.AddRange( new string[] { "latkUnreal" } );
 	}
+	*/
 }
