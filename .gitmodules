@@ -1,0 +1,9 @@
+[submodule "Plugins/JSONQuery"]
+	path = Plugins/JSONQuery
+	url = https://github.com/n1ckfg/JSONQuery
+[submodule "Plugins/ProceduralMeshes"]
+	path = Plugins/ProceduralMeshes
+	url = https://github.com/n1ckfg/ProceduralMeshes
+[submodule "Plugins/RuntimeMeshComponent"]
+	path = Plugins/RuntimeMeshComponent
+	url = https://github.com/n1ckfg/RuntimeMeshComponent
