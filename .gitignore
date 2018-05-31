@@ -61,3 +61,10 @@ Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+*.pri
+*.pro
+*.kdev4
+*CodeCompletionFolders.txt
+*CodeLitePreProcessor.txt
+Makefile
